@@ -50,32 +50,23 @@ body {
   stroke: var(--cord);
 }
 
-.bulb__filament {
-  stroke: var(--filament);
+#area{
+   
+    animation: swing 4s ease-in-out  infinite  alternate;
+    transform-origin: 50% 0;
+    
 }
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
 
-.bulb__shine {
-  stroke: var(--shine);
-}
 
-.bulb__flash {
-  stroke: #f5e0a3;
-  display: none;
-}
 
-.bulb__bulb {
-  stroke: var(--stroke);
-  fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
-}
-
-.bulb__cap {
-  fill: var(--cap);
-}
-
-.bulb__cap-shine {
-  fill: var(--shine);
-}
-
-.bulb__cap-outline {
-  stroke: var(--stroke);
-}
